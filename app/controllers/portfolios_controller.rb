@@ -41,4 +41,17 @@ class PortfoliosController < ApplicationController
       end
     end
   end
+
+  def destroy
+    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item.destroy
+    respond_to do |format|
+      if @portfolio_item.destroyed?
+        format.html { redirect_to portfolios_path, notice: 'Portfolio successfully destroyed !' }
+      else
+        format.html { render :portfolios_path }
+      end
+    end
+  end
+
 end
