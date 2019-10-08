@@ -1,0 +1,8 @@
+<div>
+  <div><%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil?%></div>
+  <h1><%= @portfolio_item.title %></h1>
+  <div>
+    <em><%= @portfolio_item.title %></em>
+    <p><%= @portfolio_item.body %></p>
+  </div>
+</div>
