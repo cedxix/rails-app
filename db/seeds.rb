@@ -58,8 +58,8 @@ puts "8 Portfolio items with Ruby"
 
 2.times do |portfolio_index|
   Portfolio.create!(
-      title: "React #{portfolio_index}",
-      subtitle: "React is maybe not that reactive.",
+      title: "Portfolio #{portfolio_index}",
+      subtitle: "Angular",
       body: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
       main_image: "http://placehold.it/1600x600",
       thumb_image: "http://placehold.it/350x200",
