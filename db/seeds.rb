@@ -5,11 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+3.times do |topic|
+  Topic.create!(
+      title: "Topic #{topic}"
+  )
+end
+
+puts "3 Topics created"
 
 10.times do |blog_index|
   Blog.create!(
       title: "My blog post #{blog_index}",
-      body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      topic_id: Topic.last.id
   )
 end
 
@@ -34,4 +42,28 @@ puts "5 Skill items created"
   )
 end
 
-puts "9 Portfolio items created"
+puts "9 Portfolio items with React"
+
+8.times do |portfolio_index|
+  Portfolio.create!(
+      title: "Portfolio #{portfolio_index}",
+      subtitle: "Ruby on Rails",
+      body: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
+      main_image: "http://placehold.it/1600x600",
+      thumb_image: "http://placehold.it/350x200",
+      )
+end
+
+puts "8 Portfolio items with Ruby"
+
+2.times do |portfolio_index|
+  Portfolio.create!(
+      title: "React #{portfolio_index}",
+      subtitle: "React is maybe not that reactive.",
+      body: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old",
+      main_image: "http://placehold.it/1600x600",
+      thumb_image: "http://placehold.it/350x200",
+      )
+end
+
+puts "2 Portfolio items with React"
