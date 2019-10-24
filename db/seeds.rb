@@ -67,3 +67,12 @@ puts "8 Portfolio items with Ruby"
 end
 
 puts "2 Portfolio items with React"
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+      name: "Technology #{technology}",
+      portfolio_id: Portfolio.last.id
+      )
+end
+
+puts "3 Technology added"
