@@ -62,7 +62,6 @@ class BlogsController < ApplicationController
   end
 
   def toggle_status
-    byebug
     redirect_to blog_url
   end
 
