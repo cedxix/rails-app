@@ -1,5 +1,4 @@
-<h1>Welcome to home page</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<span>Hi <%= current_user.first_name if current_user %>,</span>
 <p>
 <h1>Blog posts</h1>
 <div><%= @post.inspect %></div>
