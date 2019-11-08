@@ -21,9 +21,7 @@
   <div><%= render 'shared/navbar', location: 'bottom' %></div>
 </div>
 
-<% if session[:source] %>
-  <p>Thanks for visiting me from <%= session[:source] %></p>
-<% end %>
+<%= source_helper('blog') %>
 </body>
 
 </html>
