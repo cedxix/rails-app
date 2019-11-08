@@ -16,15 +16,7 @@
   <p class="alert"><%= alert %></p>
 
   <div>
-    <div>
-      <nav>
-        <%= link_to "Home", root_path %>
-        <%= link_to "Blog", blogs_path %>
-        <%= link_to "Portfolio", portfolios_path %>
-        <%= link_to "About", about_path %>
-        <%= link_to "Content", contact_path %>
-      </nav>
-    </div>
+    <div><%= render 'shared/navbar' %></div>
     <div>
       <% if current_user.is_a?(User) %>
         <%= link_to "Logout", destroy_user_session_path, method: :delete %>
