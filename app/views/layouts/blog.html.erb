@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= @page_title %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <meta name=”description” content=”<%= @seo_description %>“>
+</head>
+
+<body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<div><%= login_helper %></div>
+<%= yield %>
+
+<div>
+  <div><%= render 'shared/navbar', location: 'bottom' %></div>
+</div>
+
+<%= source_helper('blog') %>
+</body>
+
+</html>
