@@ -51,3 +51,6 @@ gem 'friendly_id', '~> 5.3.0'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 # bootstrap
 gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
+# petergate authorization
+gem 'petergate', '~> 2.0', '>= 2.0.1'
