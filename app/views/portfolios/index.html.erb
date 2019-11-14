@@ -3,7 +3,7 @@
 </div>
 <div>
   <div>
-    <%= link_to "Add portfolio", new_portfolio_path %>
+    <%= link_to "Add portfolio", new_portfolio_path if logged_in?(:site_admin) %>
   </div>
 </div>
 <div>
