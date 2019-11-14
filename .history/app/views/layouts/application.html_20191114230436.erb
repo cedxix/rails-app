@@ -14,7 +14,14 @@
   <meta name=”description” content=”<%= @seo_description %>“>
 </head>
 
-<body class="text-center">
+<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <div>
+    <div><%= render 'shared/navbar', location: 'top' %></div>
+    <div><%= login_helper %></div>
+  </div>
   <%= yield %>
   <%= source_helper('application') %>
 </body>

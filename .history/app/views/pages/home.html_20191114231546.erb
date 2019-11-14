@@ -4,12 +4,16 @@
   <p class="alert"><%= alert %></p>
 
   <div>
-    <div></div>
+    <div><%= render 'shared/navbar', location: 'top' %></div>
     <div><%= login_helper %></div>
   </div>
     <div class="inner">
         <h3 class="masthead-brand">Cover</h3>
-        <%= render 'shared/navbar', location: 'top' %>
+        <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Contact</a>
+        </nav>
     </div>
     </header>
 
